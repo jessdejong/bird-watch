@@ -1,0 +1,117 @@
+<html>
+<head>
+    <title>Website</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='home.css')}}">
+    <meta name = "viewport" content = "width = device-width, user-scaleable=yes initial-scale = 1.0">
+    <link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    <script src="{{url_for('static',filename='form.js')}}"></script>
+</head>
+<body>
+<div id="background"></div>
+<div id="center">
+    <div class="row valign-wrapper">
+        <div id="ahhh" class="col s16 m6">
+            <div id="bet" class="card grey lighten-5">
+                <div class="card-content white-text">
+                    <div class="row valign-wrapper">
+                        <form onsubmit="console.log('hi'); return false;" class="col s16 m16 offset-m1">
+                            <div class="row valign-wrapper">
+                                <div class="input-field">
+                                    <input placeholder="Username" id="username" type="text" class="validate">
+                                </div>
+                            </div>
+                            <button id="button" type="button" class="btn btn-primary col s12 m12 offset-m6">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="center2">
+<div class="row center-align">
+    <div class = "col s12 m12">
+                <div id="trying" style="background: rgba(255, 255, 255, 0);" class = "card">
+                    <div id = "stats" class="center-align">
+                        <span id="loading" class="card-title center-align" v-if="title"><img height="674px" widht="674px" src="
+http://i.imgur.com/0kvtMLE.gif"/></span>
+                    </div>
+                </div>
+            </div>        
+    <table style="width: 100%">
+        <tr>
+            <th><div class = "col s12 m12">
+                <div class = "card">
+                    <div id = "stats" class="center-align">
+                        <span id="harmful"class="card-title center-align" v-if="title">Message:</span>
+                    </div>
+                </div>
+            </div><div class = "col s12 m12">
+                <div class = "card">
+                    <div id = "stats" class="center-align">
+                        <span id="good" class="card-title center-align" v-if="title">a</span>
+                    </div>
+                </div>
+            </div>
+        </div><div id="statistics-container" class="center-align">
+        <div class="row center-align">
+            <div class = "col s12 m12">
+                <div class = "card">
+                    <div id = "stats" class="center-align">
+                        <span id="good" class="card-title center-align" v-if="title">Username</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><div id="content-card-container">
+    <div class="row">
+      <div class="col s12 m12">
+        <div id="why" class="card">
+          <div id="wow" class="card-content">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></th>
+            <th><div class = "col s12 m12">
+                <div class = "card">
+                    <div id = "stats" class="center-align">
+                        <span id="haha" class="card-title center-align" v-if="title">Message:</span>
+                    </div>
+                </div>
+            </div><div class = "col s12 m12">
+                <div class = "card">
+                    <div id = "stats" class="center-align">
+                        <span class="card-title center-align" v-if="title">Following</span>
+                    </div>
+                </div>
+            </div>
+        </div><div id="statistics-container" class="center-align">
+        <div class="row center-align">
+            <div class = "col s12 m12">
+                <div class = "card">
+                    <div id = "stats" class="center-align">
+                        <span class="card-title center-align" v-if="title">Following</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><div id="content-card-container">
+    <div class="row">
+      <div class="col s12 m12">
+        <div id="why" class="card">
+          <div id="wow2" class="card-content">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></th>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

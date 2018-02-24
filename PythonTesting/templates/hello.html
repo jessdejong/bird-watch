@@ -1,0 +1,25 @@
+<!doctype html>
+
+
+
+<html>
+   <body>
+      <title>Hello from Flask</title>
+	{% if username %}
+  	<h1>Hello {{ username }}!</h1>
+		{% else %}
+	  <h1>Hello, World!</h1>
+		{% endif %}
+
+
+
+
+      <form action = "http://localhost:5000/home" method = "post">
+         <p>Enter Name:</p>
+         <p><input type = "text" name = "username" /></p>
+         <p><input type = "submit" value = "submit" /></p>
+      </form>
+      
+   </body>
+</html>
+

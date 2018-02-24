@@ -1,0 +1,73 @@
+* {
+margin: 0;
+padding: 0;
+}
+#background
+{
+    top: 0;
+    width:100%;
+    height:200%;
+    position:absolute;
+    z-index:-1;
+    background-image: url("https://cdn.omnicalculator.com/images/patterns/default-ee87dac2ab.svg");
+    background-size: cover;
+}
+#center
+{
+    margin-top: 15%;
+    margin-left: 35%;
+}
+#center2
+{
+    margin-top: 18%;
+}
+#trying
+{
+box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+}
+.validate
+{
+    color: black;
+}
+.please
+{
+background:    #3d85c6;
+background:    -webkit-linear-gradient(#3d85c6, #073763);
+background:    linear-gradient(#3d85c6, #073763);
+border-radius: 5px;
+padding:       8px 20px;
+color:         #ffffff;
+display:       inline-block;
+font:          normal 700 24px/1 "Calibri", sans-serif;
+text-align:    center;
+text-shadow:   1px 1px #000000;
+}
+/*label*/
+#bet
+{
+    box-shadow: -7px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.input-field label{
+    color: black;
+}
+/*focus color*/
+.input-field input[type=text]:focus + label{
+    color: black;
+}
+/*valid color*/
+
+/*invalid color*/
+
+/*icon prefix focus color*/
+.input-field .prefix.active{
+    color: black;
+}
+
+
+h1
+{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
