@@ -15,7 +15,8 @@ def getUserTweets(username):
     tweets = [];
     for i in range(len(data)):
         tweets.append(data[i]["text"].encode('ascii',errors='ignore').decode())
-    return tweets
+        links.append("https://www.twitter.com/"+username+"/status/"+str(data[i]["id"]))
+    return tweets, links
     
 # get list of followers
 def getUserFollowers(username):
