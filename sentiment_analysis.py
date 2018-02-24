@@ -108,7 +108,7 @@ def find_negative_tweets(username):
             anger += data['keywords'][0]['emotion']['anger']
             
             divisor += 1.0
-            print(divisor)
+            # print(divisor)
 
 
         # except IndexError:
@@ -121,4 +121,4 @@ def find_negative_tweets(username):
     else:
         return neg_tweets, 0, 0, 0, 0, 0, 0
 
-print(find_negative_tweets("syedthekid123"))
+# print(find_negative_tweets("syedthekid123"))
