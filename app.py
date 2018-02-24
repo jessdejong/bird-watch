@@ -13,8 +13,9 @@ def get_usernames(username):
     return ' '.join(twitter_wrapper.getUserFollowers(username))
 
 # get urls
-@app.route('/urls/')
-def get_urls():
+@app.route('/urls/<username>')
+def get_urls(username):
+    return ' '.join(twitter_wrapper.getUserLinks(username))
 
 
 # STUFF WE NEED TO DO:
