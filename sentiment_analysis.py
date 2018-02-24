@@ -8,6 +8,18 @@ natural_language_understanding = NaturalLanguageUnderstandingV1(
         password='nW4Q8XpczFc4',
         version='2017-02-27')
 
+# find if it has a tag
+def hasTag (text):
+    if (text.find("@") != -1):
+        return True
+    return False
+
+def remove_retweet(text):
+    if (text.find("RT @") != -1):
+        return text[(text.find(":")+1):]
+    return text
+
+
 # find negative tweets
 def find_negative_tweets(username):
     # get tweets
@@ -30,12 +42,15 @@ def find_negative_tweets(username):
 
     # go through every tweet
     for i in range(0, len(tweets)):
-        # print(tweets[i])
+        #print(tweets[i])
+        
+
+        # remove characters other than space and letters
         tweet = ''.join(i for i in tweets[i] if i.isalpha() or i.isspace())
         # tweet = tweet * 4
         # print(tweet)
 
-        if (len(tweet) < 5):
+        if (len(tweet) < 10):
             continue
 
         response = natural_language_understanding.analyze(
@@ -59,8 +74,29 @@ def find_negative_tweets(username):
             # data['keywords'][0]['emotion']['anger']
             # print(data['keywords'][0]['emotion']['anger'])
 
-            if (data['keywords'][0]['sentiment']['score'] < -.2):
+            # if (data['keywords'][0]['sentiment']['score'] < -.5):
+            #    neg_tweets.append(urls[i])
+
+
+
+            # CURRENT GETTING
+            # if (hasTag(tweets[i]) and data['keywords'][0]['emotion']['anger'] > .15):
+            #    neg_tweets.append(urls[i])
+            if (hasTag(remove_retweet(tweets[i])) and data['keywords'][0]['sentiment']['score'] < -.5 and data['keywords'][0]['emotion']['anger'] > .15):
+                #print(tweets[i])
                 neg_tweets.append(urls[i])
+                #print("#################################appended")
+
+
+
+
+                # print(remove_retweet(tweets[i]))
+            #elif (hasTag(tweets[i]) and data['keywords'][0]['sentiment']['score'] < -.4):
+                # neg_tweets.append(urls[i])
+
+            # print(data['keywords'][0]['sentiment']['score'])
+            # print(data['keywords'][0]['emotion']['anger'])
+
             
             # Getting averages
             average_sentiment += data['keywords'][0]['sentiment']['score']
@@ -72,12 +108,12 @@ def find_negative_tweets(username):
             
             divisor += 1.0
 
+
         # except IndexError:
         except:
             pass
 
-    print(average_sentiment/divisor)
+#    print(average_sentiment/divisor)
     return neg_tweets, average_sentiment/divisor, sadness/divisor, joy/divisor, fear/divisor, disgust/divisor, anger/divisor
 
-
-print(find_negative_tweets("bobthebully123"))
+# print(find_negative_tweets("bobthebully123"))

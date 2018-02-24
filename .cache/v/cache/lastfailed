@@ -1,0 +1,10 @@
+{
+  "flask/examples/flaskr/tests/test_flaskr.py": true,
+  "flask/examples/minitwit/tests/test_minitwit.py": true,
+  "flask/examples/patterns/largerapp/tests/test_largerapp.py": true,
+  "flask/tests/test_cli.py": true,
+  "flask/tests/test_helpers.py": true,
+  "flask/tests/test_json_tag.py": true,
+  "flask/tests/test_logging.py": true,
+  "flask/tests/test_testing.py": true
+}
