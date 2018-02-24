@@ -5,9 +5,13 @@ app = Flask(__name__)
 def index():
     return 'Index Page'
 
-@app.route('user/<username>')
+@app.route('/user/<username>')
 def get_user(username):
-    # get the users tweets
+    array = []
+    array.append('abc')
+    array.append('how')
+
+    return ', '.join(array)
 
 
 # STUFF WE NEED TO DO:
