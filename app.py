@@ -1,17 +1,20 @@
 from flask import Flask
+import twitter_wrapper
+
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     return 'Index Page'
 
+# get user names
 @app.route('/user/<username>')
-def get_user(username):
-    array = []
-    array.append('abc')
-    array.append('how')
+def get_usernames(username): 
+    return ' '.join(twitter_wrapper.getUserFollowers(username))
 
-    return ', '.join(array)
+# get urls
+@app.route('/urls/')
+def get_urls():
 
 
 # STUFF WE NEED TO DO:
