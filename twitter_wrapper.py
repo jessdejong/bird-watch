@@ -29,6 +29,3 @@ def getUserLinks(username):
     for i in range(len(data)):
         links.append("https://www.twitter.com/"+username+"/status/"+str(data[i]["id"]))
     return tweets, links
-
-#print(getUserFollowers("SyedIsSoHot"))
-print(getUserTweets("SyedIsSoHot"))
