@@ -18,6 +18,7 @@ def get_urls(username):
     return ' '.join(twitter_wrapper.getUserLinks(username))
 
 
+
 # STUFF WE NEED TO DO:
 #potential tweets that are negative
 #potential users that are negative

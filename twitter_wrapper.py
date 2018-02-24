@@ -12,7 +12,7 @@ def getUserTweets(username):
     tweets = [];
     for i in range(len(data)):
         tweets.append(data[i]["text"].encode('ascii',errors='ignore').decode())
-    return tweets, links
+    return tweets
     
 def getUserFollowers(username):
     t = Twitter(auth=OAuth(ACCESS_TOKEN, ACCESS_SECRET, CONSUMER_KEY, CONSUMER_SECRET))
@@ -28,4 +28,4 @@ def getUserLinks(username):
     links = [];
     for i in range(len(data)):
         links.append("https://www.twitter.com/"+username+"/status/"+str(data[i]["id"]))
-    return tweets, links
+    return links
