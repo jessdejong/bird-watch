@@ -76,6 +76,7 @@ def find_negative_tweets(username):
 
             # if (data['keywords'][0]['sentiment']['score'] < -.5):
             #    neg_tweets.append(urls[i])
+            # print(data)
 
 
 
@@ -107,6 +108,7 @@ def find_negative_tweets(username):
             anger += data['keywords'][0]['emotion']['anger']
             
             divisor += 1.0
+            print(divisor)
 
 
         # except IndexError:
@@ -114,6 +116,9 @@ def find_negative_tweets(username):
             pass
 
 #    print(average_sentiment/divisor)
-    return neg_tweets, average_sentiment/divisor, sadness/divisor, joy/divisor, fear/divisor, disgust/divisor, anger/divisor
+    if (divisor != 0):
+        return neg_tweets, average_sentiment/divisor, sadness/divisor, joy/divisor, fear/divisor, disgust/divisor, anger/divisor
+    else:
+        return neg_tweets, 0, 0, 0, 0, 0, 0
 
-# print(find_negative_tweets("bobthebully123"))
+print(find_negative_tweets("syedthekid123"))
