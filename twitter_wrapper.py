@@ -8,7 +8,7 @@ CONSUMER_SECRET = "DoVIxtMN4wETttNCfjiAnRyRMK9EL1CrLLtUXi5SroqjTGUAnx"
 
 def getUserTweets(username):
     t = Twitter(auth=OAuth(ACCESS_TOKEN, ACCESS_SECRET, CONSUMER_KEY, CONSUMER_SECRET))
-    data = json.loads(json.dumps(t.statuses.user_timeline(screen_name=username, count=200)))
+    data = json.loads(json.dumps(t.statuses.user_timeline(screen_name=username, count=10)))
     tweets = [];
     for i in range(len(data)):
         tweets.append(data[i]["text"].encode('ascii',errors='ignore').decode())
@@ -16,7 +16,7 @@ def getUserTweets(username):
     
 def getUserFollowers(username):
     t = Twitter(auth=OAuth(ACCESS_TOKEN, ACCESS_SECRET, CONSUMER_KEY, CONSUMER_SECRET))
-    data = json.loads(json.dumps(t.friends.list(screen_name=username, count=200)))
+    data = json.loads(json.dumps(t.friends.list(screen_name=username, count=100)))
     friends = [];
     for i in range(len(data["users"])):
         friends.append(data["users"][i]["screen_name"])
@@ -24,8 +24,9 @@ def getUserFollowers(username):
 
 def getUserLinks(username):
     t = Twitter(auth=OAuth(ACCESS_TOKEN, ACCESS_SECRET, CONSUMER_KEY, CONSUMER_SECRET))
-    data = json.loads(json.dumps(t.statuses.user_timeline(screen_name=username, count=200)))
+    data = json.loads(json.dumps(t.statuses.user_timeline(screen_name=username, count=10)))
     links = [];
     for i in range(len(data)):
         links.append("https://www.twitter.com/"+username+"/status/"+str(data[i]["id"]))
     return links
+

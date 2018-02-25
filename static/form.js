@@ -39,7 +39,7 @@ else
 }
 for(var i = 0; i < res.length; i++)
     {
-        $("#wow").append('<blockquote class="twitter-tweet" data-lang="en"><a href="'+res[i]+'"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><a href="'+res[i]+'"><button class="please" type="button">Delete tweet</button></a>')
+        $("#wow").append('<blockquote class="twitter-tweet" data-lang="en"><a href="'+res[i]+'"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><a href="'+res[i]+'"><button class="waves-effect waves-light btn blue accent-2" type="button">Delete tweet</button></a>')
     }
     
 
@@ -47,7 +47,7 @@ for(var i = 0; i < res2.length; i++)
     {
 	var testing = res2[i].substring(res2[i].indexOf('.com')+5,res2[i].indexOf('/status'));
 	testing = "https://twitter.com/" + testing;
-        $("#wow2").append('<blockquote class="twitter-tweet" data-lang="en"><a href="'+res2[i]+'"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><a href="'+testing+'"><button class="please" type="button">Unfollow</button></a>')
+        $("#wow2").append('<blockquote class="twitter-tweet" data-lang="en"><a href="'+res2[i]+'"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><a href="'+testing+'"><button class="waves-effect waves-light btn blue accent-2" type="button">Unfollow</button></a>')
     }
     });
     $("#center").animate({marginTop: '21%'},  {duartion: 50, queue: true});

@@ -1,6 +1,7 @@
 * {
 margin: 0;
 padding: 0;
+overflow: hidden;
 }
 #background
 {
@@ -38,7 +39,7 @@ border-radius: 5px;
 padding:       8px 20px;
 color:         #ffffff;
 display:       inline-block;
-font:          normal 700 24px/1 "Calibri", sans-serif;
+font:          normal 700 24px/1 "Roboto", sans-serif;
 text-align:    center;
 text-shadow:   1px 1px #000000;
 }

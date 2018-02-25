@@ -121,4 +121,3 @@ def find_negative_tweets(username):
     else:
         return neg_tweets, 0, 0, 0, 0, 0, 0
 
-# print(find_negative_tweets("syedthekid123"))
