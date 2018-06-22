@@ -8,4 +8,4 @@ Twitter API, IBM Watson Natural Language Processing, Flask (python)
 
 Contributors
 ==============
-Jess DeJong, Alex DeJong, Syed Pervaiz, Muhammad Khatri, Syed Abutalib
+Syed Abutalib, Jess DeJong, Alex DeJong, Syed Pervaiz, Muhammad Khatri
