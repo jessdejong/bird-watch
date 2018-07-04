@@ -15,7 +15,7 @@ function submit (s)
         var text = bet[0];
 	var text2 = bet[1];
 var res = text.split(" ");
-console.log(res);
+console.log(res+"");
 if(res.length==0)
 {
 	$("#harmful").text("No bad tweets!");
